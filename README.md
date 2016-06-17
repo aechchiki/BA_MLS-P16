@@ -17,3 +17,10 @@ Bioinformatics Algorithms
 	- Task 3: hash function
 	- Task 4: check runtime of the tested methods
 
+# sheet2.py: binary search and exact sequence matching 
+
+* Part 1: search arrays
+	- Task 1: naive loop
+	- Task 2: binary search
+	- Task 3: check runtime of the tested methods
+

@@ -29,3 +29,17 @@ Bioinformatics Algorithms
 	- Task 2: count and save the occurences of words
 	- Task 3: obtain the fractal images out of sequence matching
 	- Task 4: generate all possible permutations using a recursion
+	
+# sheet3.py: dynamic programming
+
+* Part 1: Needleman–Wunsch
+	- Task 1: implement Needleman–Wunsch
+	- Task 2: test the implementation
+* Part 2: permutation test and Gumble distribution
+	- Task 1: randomly shuffle a string
+	- Task 2: generate a reference score and calculate the score for 1000 randomly shuffled sequences
+	- Task 3: plot a histogram of the calculated permutation scores
+	- Task 4: compute the associate p-value for the reference score
+	- Task 5: compute the associate p-value using an estimated gumble distribution
+	- Task 6: plot the histogram and the fitted probability density function
+	

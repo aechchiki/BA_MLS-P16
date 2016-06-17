@@ -107,4 +107,70 @@ reference_score = results['score']
 for res, value in results.items():
     print(res, value)
     
+    
+### Part 2: Alignment signifiance using permutation test and Gumble distribution ### 
 
+# Task 1: Randomly shuffle a given sequence string
+def shuffle_sequence(string):
+    return ''.join(random.sample(string,len(string)))
+    
+# Task 2: Generate a reference score and calculate the score for 1000 randomly shuffled sequences
+
+# use previously defined parameters and sequences
+
+reference_score = results['score']
+permutation_scores = []
+
+# calcuate the permutation scores for 1000 times reshuffeled sequences
+for i in range(0,1000):
+    shuffle_seq1 = shuffle_sequence(seq1)
+    shuffle_seq2 = shuffle_sequence(seq2)
+    shuffle_results = needleman_wunsch_global(shuffle_seq1,shuffle_seq2,match_award,mismatch_penalty,gap_penalty, False)
+    permutation_scores.append(shuffle_results['score'])
+print(permutation_scores[0])
+
+# Task 3: Plot a histogram of the calculated permutation scores
+
+plt.hist(permutation_scores)
+plt.title("Score distribution")
+plt.xlabel("Score")
+plt.ylabel("Frequency")
+plt.axvline(reference_score)
+plt.show()
+
+# Task 4: Compute the associate p-value for the reference score
+# estimate whether our reference score is part of scores produced when randomly shuffeling the sequences, we will estimate its p-value
+
+# p_value = number of samples bigger than the reference + 1 for the reference / numbers of samples + 1 for the reference
+
+number_value_smaller = 0
+# calculate the number of samples smaller than the reference score
+for score in permutation_scores:
+    if score < reference_score:
+        number_value_smaller +=1
+# estimate the number of total samples + 1
+number_samples = len(permutation_scores) +1
+# calculate the p-value
+p_value = 1-(float(number_value_smaller) / float(number_samples))
+print(p_value )
+
+# Task 5: Compute the associate p-value using an estimated gumble distribution
+
+# estimate the parameter loc and scale using the fit function
+loc,scale = gumbel_r.fit(permutation_scores)
+
+# calculate the p-value
+p_value = 1-gumbel_r.cdf(reference_score, loc=loc, scale=scale )
+print(p_value)
+
+
+# Task 6: Plot the histogram and the fitted probability density function with the reference score as vertical line
+
+fig, ax = plt.subplots(1, 1)
+x = np.linspace(gumbel_r.ppf(0.01,loc=loc, scale=scale),gumbel_r.ppf(0.99,loc=loc, scale=scale), 1000)
+
+ax.plot(x, gumbel_r.pdf(x, loc=loc, scale=scale), 'k-', lw=2, label='frozen pdf')
+ax.hist(permutation_scores, normed=True, histtype='stepfilled', alpha=0.2)
+ax.legend(loc='best', frameon=False)
+ax.axvline(reference_score)
+plt.show()

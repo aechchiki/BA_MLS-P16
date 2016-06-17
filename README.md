@@ -24,3 +24,8 @@ Bioinformatics Algorithms
 	- Task 2: binary search
 	- Task 3: check runtime of the tested methods
 
+* Part 2: exact sequence matching 
+	- Task 1: convert a word into a position in the array
+	- Task 2: count and save the occurences of words
+	- Task 3: obtain the fractal images out of sequence matching
+	- Task 4: generate all possible permutations using a recursion

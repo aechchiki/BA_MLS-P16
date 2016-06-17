@@ -1,9 +1,11 @@
-### Part 1: populate arrays ###
+### Part 0: import libraries  ###
 
-# import libraries 
 import random
 import test_modules
 from Bio import SeqIO
+
+
+### Part 1: populate arrays ###
 
 # Task 1: Write a function that preallocates an array of a given size and populates the array with random values
 

@@ -1,7 +1,7 @@
 # BA_MLS-P16
 Bioinformatics Algorithms
 
-# sheet1.py: populate and intersect arrays
+# Populate and intersect arrays (sheet1.py)
 
 * Part 1: populate arrays
 	- Task 1: populate preallocated array with random values
@@ -9,28 +9,25 @@ Bioinformatics Algorithms
 		- Task 2.1: write nested for loop
 		- Task 2.2: use uinbuilt append 
 	- Task 3: check runtime of the tested methods 
-
-
 * Part 2: intersect arrays
 	- Task 1: naive nested for loop
 	- Task 2: while loop on sorted arrays 
 	- Task 3: hash function
 	- Task 4: check runtime of the tested methods
 
-# sheet2.py: binary search and exact sequence matching 
+# Binary search and exact sequence matching (sheet2.py)
 
 * Part 1: search arrays
 	- Task 1: naive loop
 	- Task 2: binary search
 	- Task 3: check runtime of the tested methods
-
 * Part 2: exact sequence matching 
 	- Task 1: convert a word into a position in the array
 	- Task 2: count and save the occurences of words
 	- Task 3: obtain the fractal images out of sequence matching
 	- Task 4: generate all possible permutations using a recursion
 	
-# sheet3.py: dynamic programming
+# Dynamic programming (sheet3.py)
 
 * Part 1: Needleman–Wunsch
 	- Task 1: implement Needleman–Wunsch

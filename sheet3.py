@@ -1,3 +1,11 @@
+### Part 0: import libraries  ###
+
+import numpy
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib
+from scipy.stats import gumbel_r
+
 ### Part 1: Needleman-Wunsch ###
 
 # Task 1: Implement the Needleman-Wunsch algorithm

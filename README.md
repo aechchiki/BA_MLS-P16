@@ -40,3 +40,5 @@ Bioinformatics Algorithms
 	- Task 5: compute the associate p-value using an estimated gumble distribution
 	- Task 6: plot the histogram and the fitted probability density function
 	
+* 
+	

@@ -7,7 +7,7 @@ Bioinformatics Algorithms
 	- Task 1: populate preallocated array with random values
 	- Task 2: populate non-preallocated array with random values 
 		- Task 2.1: write nested for loop
-		- Task 2.2: use uinbuilt append 
+		- Task 2.2: use inbuilt append 
 	- Task 3: check runtime of the tested methods 
 * Part 2: intersect arrays
 	- Task 1: naive nested for loop
@@ -40,5 +40,10 @@ Bioinformatics Algorithms
 	- Task 5: compute the associate p-value using an estimated gumble distribution
 	- Task 6: plot the histogram and the fitted probability density function
 	
-* 
+# Network problems (sheet4.py)
+
+* Part 1: Dijkstra's algorithm
+	- Task 1: prepare environment for Dijkstra
+	- Task 2: implement Dijkstra
+
 	
